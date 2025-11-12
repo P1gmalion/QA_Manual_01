@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Lesson#26 - AutomaticTesting - Gregory Ponomarenko</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">LoginFunctionality</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demoblaze.com<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#login2<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=#loginusername<datalist></datalist></td><td>${GlobalVariable.username}</td></tr>
+<tr><td>type</td><td>css=#loginpassword<datalist></datalist></td><td>${GlobalVariable.password}</td></tr>
+<tr><td>click</td><td>xpath=//button[text()='Log in']<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>css=#nameofuser<datalist><option>css=#nameofuser</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>css=#nameofuser<datalist><option>css=#nameofuser</option></datalist></td><td>Welcome ${GlobalVariable.username}</td></tr>
+<tr><td>click</td><td>css=#logout2<datalist></datalist></td><td></td></tr>
+<tr><td>close</td><td><datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">Add Item to Cart</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demoblaze.com<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#login2<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=#loginusername<datalist></datalist></td><td>${GlobalVariable.username}</td></tr>
+<tr><td>type</td><td>css=#loginpassword<datalist></datalist></td><td>${GlobalVariable.password}</td></tr>
+<tr><td>click</td><td>xpath=//button[text()='Log in']<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//a[text()='Phones']<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//a[text()='Samsung galaxy s6']<datalist></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>xpath=//h2<datalist></datalist></td><td>${GlobalVariable.ProductNamePhone}</td></tr>
+<tr><td>click</td><td>xpath=//a[text()='Add to cart']<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#cartur<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Samsung galaxy s6<datalist></datalist></td><td></td></tr>
+<tr><td>verifyElementPresent</td><td>xpath=//td[contains(.,'Samsung galaxy s6')]<datalist><option>xpath=//td[contains(.,'Samsung galaxy s6')]</option></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>xpath=//td[text()='360']<datalist></datalist></td><td>${GlobalVariable.PhonePrice}</td></tr>
+<tr><td>click</td><td>xpath=//a[text()='Delete']<datalist><option>xpath=//a[text()='Delete']</option></datalist></td><td></td></tr>
+<tr><td>close</td><td><datalist></datalist></td><td></td></tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">Order Confirmation</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demoblaze.com<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#login2<datalist></datalist></td><td></td></tr>
+<tr><td>type</td><td>css=#loginusername<datalist></datalist></td><td>${GlobalVariable.username}</td></tr>
+<tr><td>type</td><td>css=#loginpassword<datalist></datalist></td><td>${GlobalVariable.password}</td></tr>
+<tr><td>click</td><td>xpath=//button[text()='Log in']<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//a[text()='Phones']<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//a[text()='Samsung galaxy s6']<datalist></datalist></td><td></td></tr>
+<tr><td>verifyText</td><td>xpath=//h2<datalist></datalist></td><td>${GlobalVariable.ProductNamePhone}</td></tr>
+<tr><td>click</td><td>xpath=//a[text()='Add to cart']<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#cartur<datalist></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Samsung galaxy s6<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//button[text()='Place Order']<datalist><option>xpath=//button[text()='Place Order']</option></datalist></td><td></td></tr>
+<tr><td>type</td><td>id=name<datalist><option>id=name</option></datalist></td><td>${GlobalVariable.username}</td></tr>
+<tr><td>type</td><td>id=country<datalist><option>id=country</option></datalist></td><td>${GlobalVariable.Country}</td></tr>
+<tr><td>type</td><td>id=city<datalist><option>id=city</option></datalist></td><td>${GlobalVariable.City}</td></tr>
+<tr><td>type</td><td>id=card<datalist><option>id=card</option></datalist></td><td>${GlobalVariable.CardNumber}</td></tr>
+<tr><td>type</td><td>id=month<datalist><option>id=month</option></datalist></td><td>${GlobalVariable.Month}</td></tr>
+<tr><td>type</td><td>id=year<datalist><option>id=year</option></datalist></td><td>${GlobalVariable.Year}</td></tr>
+<tr><td>click</td><td>xpath=//button[text()='Purchase']<datalist><option>xpath=//button[text()='Purchase']</option></datalist></td><td></td></tr>
+<tr><td>pause</td><td>3000<datalist><option>3000</option></datalist></td><td></td></tr>
+<tr><td>verifyTextPresent</td><td>Thank you for your purchase!<datalist><option>Thank you for your purchase!</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//button[text()='OK']<datalist><option>xpath=//button[text()='OK']</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>css=#logout2<datalist><option>css=#logout2</option></datalist></td><td></td></tr>
+<tr><td>close</td><td><datalist></datalist></td><td></td></tr>
+</tbody></table>
+</body>
+</html>
